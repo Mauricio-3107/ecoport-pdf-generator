@@ -11,8 +11,36 @@
       line-height: 1.6;
     }
     header {
-      text-align: center;
       margin-bottom: 30px;
+    }
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        width: 100px;
+        object-fit: contain;
+        margin-right: 20px;
+    }
+    .header-text {
+        text-align: center;
+        flex: 1;
+    }
+    .header-text h1 {
+      margin: 4px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .header-text p {
+      margin: 2px 0;
+      font-size: 12px;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid #000;
+      margin-top: 10px;
     }
     .quote-number {
       text-align: right;
@@ -41,11 +69,15 @@
 </head>
 <body>
   <header>
-    <h2>SOCIEDAD DE INVERSIONES RAMIREZ</h2>
-    <h3>ECOPORT SRL</h3>
-    <p>Parque Industrial Latinoamericano – 7mo anillo y Banzer<br>
-       Cel. 76464280<br>
-       E-mail: ecoportsrl@hotmail.com</p>
+    <div class="header-container">
+        <img src="logo.png" alt="Ecoport SRL Logo" class="logo"/>
+        <div class="header-next">
+            <h1>ECOPORT SRL</h1>
+            <p>Parque industrial Latinoamericano – 7mo anillo y Banzer    Cel. 76464280</p>
+            <p>E-mail: ecoportsrl@hotmail.com</p>
+        </div>
+    </div>
+    <hr />
   </header>
 
   <div class="quote-number">
