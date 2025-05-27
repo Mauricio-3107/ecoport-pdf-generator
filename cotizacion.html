@@ -11,7 +11,7 @@
         line-height: 1.4;
       }
       header {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       .header-container {
         display: flex;
@@ -46,13 +46,13 @@
       }
       .quote-number {
         text-align: right;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-weight: bold;
       }
       .quote-date {
         text-align: right;
         font-style: italic;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
       .section {
         margin-bottom: 20px;
@@ -71,12 +71,46 @@
         font-size: 16px;
         font-weight: bold;
       }
-      .signature {
-        margin-top: 40px;
+
+      /* Footer container: two columns */
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 10px;
+      }
+
+      /* Left: signature */
+      .signature-block {
         text-align: left;
       }
-      .signature p {
-        margin: 4px 0;
+
+      .signature-img {
+        width: 150px; /* adjust to taste */
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      /* Signature text */
+      .signature-block p {
+        margin: 2px 0;
+        font-size: 12px;
+      }
+
+      .gerencia {
+        padding-left: 8px;
+      }
+
+      /* Right: stamp */
+      .stamp-block {
+        padding-top: 30px;
+        padding-left: 30px;
+        flex: 1;
+      }
+
+      .stamp-img {
+        width: 140px; /* adjust to taste */
+        display: inline-block;
       }
     </style>
   </head>
@@ -162,10 +196,6 @@
           que disponemos de 21 días libres para su devolución. Esto es crucial
           para evitar costos adicionales por demoras.
         </li>
-        <li>
-          Nuestra empresa se encargará de devolver el contenedor a tiempo,
-          garantizando así el cumplimiento de los plazos establecidos.
-        </li>
       </ul>
     </div>
 
@@ -173,18 +203,15 @@
       <h3>Ventajas de Nuestro Servicio:</h3>
       <ul>
         <li>
-          <strong>Experiencia:</strong> Contamos con una sólida trayectoria de
-          30 años en el mercado de transporte terrestre, lo que nos permite
-          ofrecer un servicio eficiente y confiable.
+          <strong>30 años de experiencia:</strong> Sabemos cómo mover su valiosa carga.
         </li>
         <li>
-          <strong>Responsabilidad:</strong> Nos comprometemos a manejar su carga
-          con el mayor cuidado y profesionalismo.
+          <strong>Responsabilidad garantizada:</strong> Su mercancía viaja
+          segura y en buenas manos.
         </li>
         <li>
-          <strong>Monitoreo en Tiempo Real:</strong> Gracias a nuestros sistemas
-          de GPS, usted podrá conocer la ubicación de su carga en todo momento,
-          brindándole tranquilidad y control sobre el proceso de transporte.
+          <strong>GPS en tiempo real:</strong> Sepa dónde está su carga en todo
+          momento.
         </li>
       </ul>
     </div>
@@ -197,10 +224,21 @@
       </p>
     </div>
 
-    <div class="signature">
-      <p>-------------------------------------------</p>
-      <p><strong>Lic. Omar Ramirez Escobar</strong></p>
-      <p>Gerencia ECOPORT SRL.</p>
+    <!-- …everything above… -->
+
+    <div class="footer">
+      <div class="signature-block">
+        <img
+          src="firma.png"
+          alt="Firma Lic. Omar Ramirez Escobar"
+          class="signature-img"
+        />
+        <p><strong>Lic. Omar Ramirez Escobar</strong></p>
+        <p class="gerencia">Gerencia ECOPORT SRL.</p>
+      </div>
+      <div class="stamp-block">
+        <img src="sello.png" alt="Sello ECOPORT SRL" class="stamp-img" />
+      </div>
     </div>
   </body>
 </html>
