@@ -18,7 +18,7 @@ const path = require("path");
     path: "cotizacion-ecoport.pdf",
     format: "A4",
     printBackground: true,
-    margin: { top: "20mm", bottom: "20mm", left: "20mm", right: "20mm" },
+    // margin: { top: "20mm", bottom: "20mm", left: "20mm", right: "20mm" },
   });
 
   await browser.close();
