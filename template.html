@@ -117,7 +117,7 @@
   <body>
     <header>
       <div class="header-container">
-        <img src="logo.png" alt="Ecoport SRL Logo" class="logo" />
+        <img src="{{logoURI}}" alt="Ecoport SRL Logo" class="logo" />
         <div class="header-text">
           <h1>ECOPORT SRL</h1>
           <p>E-mail: ecoportsrl@hotmail.com</p>
@@ -133,13 +133,13 @@
       <hr />
     </header>
 
-    <div class="quote-date">Santa Cruz, 27 de mayo de 2025</div>
-    <div class="quote-number">N° COT: 2025-20</div>
+    <div class="quote-date">{{date}}</div>
+    <div class="quote-number">N° COT: {{quoteNumber}}</div>
 
     <div class="section">
       <p class="to">Señores:</p>
       <p class="company-name">
-        <strong>ELEGANCE S.R.L.</strong><br />
+        <strong>{{clientName}}</strong><br />
         Presente.-
       </p>
     </div>
@@ -156,46 +156,18 @@
     <div class="section">
       <h3>Descripción del Servicio:</h3>
       <ul>
-        <li><strong> Origen: </strong>Arica, Chile</li>
-
-        <li><strong>Destino:</strong> Santa Cruz de la Sierra, Bolivia</li>
-
-        <li><strong>Peso de la carga:</strong> 60 Tn</li>
-
-        <li><strong>Tipo de carga:</strong> Contenerizada</li>
-        <!-- <li><strong>Tipo de carga:</strong> Desconsolidado</li> -->
-
-        <li>
-          <strong>Detalle de la carga:</strong> 2 contenedores de 40 pies
-          (2x40’)
-        </li>
-        <!-- <li>
-          <strong>Detalle de la carga:</strong> Fierro
-        </li>
-         -->
-
-        <!-- Si es un contenedor o desconsolidado no hay este input -->
-        <li><strong>Flete unitario:</strong> $2.400 por contenedor</li>
-
-        <li><strong>Flete total:</strong> $4.800</li>
-
-        <li><strong>Tiempo estimado de tránsito:</strong> 5 días</li>
-
-        <li>
-          <strong>Cotización válida por:</strong> 5 días calendario desde su
-          emisión
-        </li>
+        {{#each serviceDescription}}
+        <li><strong>{{this.label}}</strong> {{this.value}}</li>
+        {{/each}}
       </ul>
     </div>
 
     <div class="section">
       <h3>Consideraciones Especiales:</h3>
       <ul>
-        <li>
-          Recomendamos realizar el retiro del contenedor lo antes posible, ya
-          que disponemos de 21 días libres para su devolución. Esto es crucial
-          para evitar costos adicionales por demoras.
-        </li>
+        {{#each considerations}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
     </div>
 
@@ -210,8 +182,7 @@
           segura y en buenas manos.
         </li>
         <li>
-          <strong>GPS en tiempo real:</strong> Sepa dónde está su carga en todo
-          momento.
+          <strong>GPS en tiempo real:</strong> Sepa dónde está su carga en todo momento.
         </li>
       </ul>
     </div>
@@ -219,8 +190,7 @@
     <div class="section">
       <p>
         Agradecemos su consideración de nuestros servicios y estamos a su
-        disposición para cualquier consulta adicional o para coordinar los
-        detalles necesarios.
+        disposición para cualquier consulta adicional o para coordinar detalles necesarios.
       </p>
     </div>
 
@@ -229,15 +199,15 @@
     <div class="footer">
       <div class="signature-block">
         <img
-          src="firma.png"
+          src="{{signURI}}"
           alt="Firma Lic. Omar Ramirez Escobar"
           class="signature-img"
         />
-        <p><strong>Lic. Omar Ramirez Escobar</strong></p>
-        <p class="gerencia">Gerencia ECOPORT SRL.</p>
+        <p><strong>{{signatory.name}}</strong></p>
+        <p class="gerencia">{{signatory.title}}</p>
       </div>
       <div class="stamp-block">
-        <img src="sello.png" alt="Sello ECOPORT SRL" class="stamp-img" />
+        <img src="{{stampURI}}" alt="Sello ECOPORT SRL" class="stamp-img" />
       </div>
     </div>
   </body>
